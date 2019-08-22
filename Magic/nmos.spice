@@ -1,0 +1,9 @@
+* SPICE3 file created from /home/EC2002/Desktop/Magic/nmos.ext - technology: scmos
+
+.option scale=1u
+
+M1000 gnd a_0_n8# a_n8_n5# Gnd nfet w=8 l=4
++ ad=48 pd=28 as=64 ps=32 
+C0 vdd gnd! 2.2fF **FLOATING
+C1 gnd gnd! 5.9fF
+C2 a_0_n8# gnd! 3.2fF
