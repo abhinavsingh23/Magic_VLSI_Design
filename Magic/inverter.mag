@@ -1,6 +1,6 @@
 magic
 tech scmos
-timestamp 1566454803
+timestamp 1567053936
 << nwell >>
 rect -35 -2 -4 16
 << polysilicon >>
@@ -16,26 +16,26 @@ rect -16 -22 -12 -15
 rect -26 1 -23 12
 rect -16 1 -12 12
 << metal1 >>
-rect -32 22 -8 23
+rect -32 22 -2 23
 rect -32 18 -26 22
 rect -21 18 -16 22
-rect -11 18 -8 22
-rect -32 17 -8 18
+rect -11 18 -2 22
+rect -32 17 -2 18
 rect -32 12 -26 17
-rect -12 -1 -6 1
+rect -10 12 -7 17
 rect -32 -10 -27 -5
 rect 2 -11 9 -4
-rect -12 -15 -6 -14
 rect -33 -30 -27 -22
-rect -33 -32 -8 -30
+rect -10 -30 -7 -22
+rect -33 -32 -4 -30
 rect -33 -37 -29 -32
 rect -23 -37 -17 -32
-rect -11 -37 -8 -32
-rect -33 -38 -8 -37
+rect -11 -37 -4 -32
+rect -33 -38 -4 -37
 << metal2 >>
-rect -12 -6 -6 -5
+rect -12 -6 -6 2
 rect -12 -9 5 -6
-rect -12 -10 -6 -9
+rect -12 -16 -6 -9
 << ntransistor >>
 rect -23 -22 -16 -15
 << ptransistor >>
@@ -48,9 +48,6 @@ rect -12 -22 -6 -15
 << pdcontact >>
 rect -32 1 -26 12
 rect -12 1 -6 12
-<< m2contact >>
-rect -12 -5 -6 -1
-rect -12 -14 -6 -10
 << psubstratepcontact >>
 rect -29 -37 -23 -32
 rect -17 -37 -11 -32
@@ -60,6 +57,6 @@ rect -16 18 -11 22
 << labels >>
 rlabel metal1 -30 -8 -29 -8 1 vin
 rlabel metal1 7 -8 8 -8 7 vout
-rlabel metal1 -29 21 -28 21 5 VOUT
 rlabel metal1 -21 -35 -20 -35 1 gnd
+rlabel metal1 -29 21 -29 21 5 Vdd
 << end >>
