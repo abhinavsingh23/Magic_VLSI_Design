@@ -2,27 +2,28 @@
 
 .option scale=1u
 
-M1000 a_n16_1# vin Vdd w_n35_n2# pfet w=11 l=7
+M1000 vout vin Vdd w_n35_n2# pfet w=11 l=7
 + ad=110 pd=42 as=99 ps=40 
-M1001 a_n16_n22# vin gnd Gnd nfet w=7 l=7
+M1001 vout vin gnd Gnd nfet w=7 l=7
 + ad=70 pd=34 as=70 ps=34 
 C0 w_n35_n2# vin 3.8fF
-C1 vout gnd! 2.3fF **FLOATING
-C2 gnd gnd! 8.8fF
-C3 vin gnd! 11.2fF
-C4 Vdd gnd! 5.2fF
+C1 gnd gnd! 7.8fF
+C2 vout gnd! 3.7fF
+C3 Vdd gnd! 7.0fF
+C4 vin gnd! 11.2fF
 
 
-vin gnd 0 PULSE(0 5 0 0 0 0.0000000005 0.000000001 100)
-Vdd gnd 0 5 Rser=0
+v1 gnd gnd! 0v
+v2 Vdd gnd! 5v
+v3 vin gnd pulse(0 5 0 2us 2us 20us 40us)
+r1 vout gnd 1meg
 
+.model pfet pmos
+.model nfet nmos
+.tran 1n 100u
 .control
 run
 write
-display
-print all
-plot vin
-plot vout
+plot v(vin) v(vout)
 .endc
-
 .end

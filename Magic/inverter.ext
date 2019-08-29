@@ -4,19 +4,13 @@ tech scmos
 style lambda=1.0(scna20_orb)
 scale 1000 1 100
 resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
-node "m2_n12_n16#" 0 1938 -12 -16 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 141 70 0 0
-node "vout" 0 2303 2 -11 m1 0 0 0 0 0 0 0 0 0 0 0 0 49 28 0 0 0 0
-node "a_n16_n22#" 38 0 -16 -22 ndiff 70 34 0 0 0 0 0 0 0 0 0 0 42 26 0 0 0 0
-node "gnd" 390 8836 -33 -22 ndc 70 34 60 44 0 0 0 0 0 0 0 0 290 96 0 0 0 0
-node "a_n16_1#" 66 0 -16 1 pdiff 0 0 110 42 0 0 0 0 0 0 0 0 66 34 0 0 0 0
+node "gnd" 38 7849 -33 -22 ndc 70 34 0 0 0 0 0 0 0 0 0 0 209 74 0 0 0 0
+node "vout" 104 3666 -16 -22 ndiff 70 34 110 42 0 0 0 0 0 0 0 0 204 80 0 0 0 0
+node "Vdd" 73 7050 -32 1 pdc 0 0 99 40 0 0 0 0 0 0 0 0 240 92 0 0 0 0
 node "vin" 152 11203 -27 -10 pc 0 0 0 0 293 100 0 0 0 0 0 0 55 32 0 0 0 0
-node "Vdd" 231 5170 -32 1 pdc 40 36 99 40 0 0 0 0 0 0 0 0 240 92 0 0 0 0
 node "w_n35_n2#" 4316 0 -35 -2 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 558 98
-cap "vout" "m2_n12_n16#" 405
-cap "a_n16_1#" "m2_n12_n16#" 270
-cap "a_n16_n22#" "m2_n12_n16#" 270
-cap "w_n35_n2#" "m2_n12_n16#" 342
+cap "w_n35_n2#" "vout" 846
+cap "vin" "w_n35_n2#" 3845
 cap "w_n35_n2#" "Vdd" 1128
-cap "w_n35_n2#" "vin" 3845
-device mosfet nfet -23 -22 -22 -21 7 7 "Gnd!" "vin" 14 0 "gnd" 7 0 "a_n16_n22#" 7 0
-device mosfet pfet -23 1 -22 2 7 11 "w_n35_n2#" "vin" 14 0 "Vdd" 11 0 "a_n16_1#" 11 0
+device mosfet nfet -23 -22 -22 -21 7 7 "Gnd!" "vin" 14 0 "gnd" 7 0 "vout" 7 0
+device mosfet pfet -23 1 -22 2 7 11 "w_n35_n2#" "vin" 14 0 "Vdd" 11 0 "vout" 11 0
